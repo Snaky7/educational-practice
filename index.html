@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Гранфорт - Премиальная защита бамперов</title>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/media.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="container header__container">
+                <a href="#" class="header__logo">
+                    <img src="icons/logo.png" alt="Гранфорт">
+                </a>
+                <nav class="header__nav">
+                    <ul class="header__list">
+                        <li><a href="#" class="header__link">Главная</a></li>
+                        <li><a href="#about" class="header__link">О нас и
+                                материалах</a></li>
+                        <li><a href="#catalog"
+                                class="header__link">Каталог</a></li>
+                        <li><a href="#advantages"
+                                class="header__link">Преимущества</a></li>
+                        <li><a href="#order"
+                                class="header__link">Заказать</a></li>
+                    </ul>
+                </nav>
+                <a href="#contacts" class="header__btn">Контакты</a>
+                <button class="header__burger" id="burger-btn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </header>
+
+        <div class="mobile-menu" id="mobile-menu">
+            <nav class="mobile-menu__nav">
+                <ul class="mobile-menu__list">
+                    <li><a href="#" class="mobile-menu__link">Главная</a></li>
+                    <li><a href="#about" class="mobile-menu__link">О нас и
+                            материалах</a></li>
+                    <li><a href="#catalog"
+                            class="mobile-menu__link">Каталог</a></li>
+                    <li><a href="#advantages"
+                            class="mobile-menu__link">Преимущества</a></li>
+                    <li><a href="#order"
+                            class="mobile-menu__link">Заказать</a></li>
+                    <li><a href="#contacts"
+                            class="mobile-menu__link">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <section class="hero">
+            <div class="container hero__container">
+                <div class="hero__content">
+                    <h1 class="hero__title">
+                        ПРЕМИАЛЬНАЯ<br>
+                        ЗАЩИТА БАМПЕРОВ<br>
+                        <span class="hero__title-accent">ДЛЯ
+                            КИТАЙСКИХ<br>ВНЕДОРОЖНИКОВ И<br>ПИКАПОВ.</span>
+                    </h1>
+                    <p class="hero__text">
+                        НЕПРЕВЗОЙДЕННОЕ КАЧЕСТВО И ТОЧНОСТЬ ПОСАДКИ.<br>
+                        Разработано из высокопрочной нержавеющей стали и
+                        прочного<br>
+                        порошкового покрытия для максимальной защиты в городе и
+                        на<br>
+                        бездорожье.
+                    </p>
+                    <div class="hero__buttons">
+                        <a href="#about" class="btn btn--primary">Узнать
+                            больше</a>
+                        <a href="#order" class="btn btn--outline">Заказать</a>
+                    </div>
+                </div>
+                <div class="hero__image">
+                    <img src="images/hero-car.png" alt="Внедорожник">
+                </div>
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <div class="container">
+                <h2 class="section-title">О НАС И <span
+                        class="text-accent">МАТЕРИАЛАХ</span></h2>
+                <p class="section-subtitle">Создано для защиты вашего автомобиля
+                    в сложных условиях без ущерба для экстерьера.</p>
+                <div class="about__grid">
+                    <div class="about__card">
+                        <div class="about__img-wrapper">
+                            <img src="images/material-steel.png"
+                                alt="Нержавеющая сталь AISI 304">
+                        </div>
+                        <h3 class="about__card-title">НЕРЖАВЕЮЩАЯ СТАЛЬ AISI
+                            304:</h3>
+                        <p class="about__card-text">Изготавливается из
+                            премиальной итальянской нержавеющей стали AISI 304 с
+                            высоким содержанием никеля и хрома. Зеркальная
+                            плазменная полировка сохраняет идеальный блеск и не
+                            тускнеет от химических реагентов.</p>
+                    </div>
+                    <div class="about__card">
+                        <div class="about__img-wrapper">
+                            <img src="images/material-black.png"
+                                alt="Черное порошковое покрытие">
+                        </div>
+                        <h3 class="about__card-title">ЧЕРНОЕ ПОРОШКОВОЕ
+                            ПОКРЫТИЕ:</h3>
+                        <p class="about__card-text">Максимальная устойчивость к
+                            царапинам и брутальный вид. Двухслойная
+                            термопластичная порошковая окраска защищает от
+                            химических реагентов, сколов и сурового климата.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="catalog" id="catalog">
+            <div class="container">
+                <h2 class="section-title">КАТАЛОГ <span
+                        class="text-accent">ПРОДУКЦИИ</span></h2>
+
+                <div class="catalog__filters">
+                    <div class="catalog__filter-group" id="car-filter">
+                        <button class="catalog__filter-btn active">JAC
+                            T9</button>
+                        <button class="catalog__filter-btn">Haval H13</button>
+                        <button class="catalog__filter-btn">Tank 300</button>
+                        <button class="catalog__filter-btn">Geely
+                            Monjaro</button>
+                        <button class="catalog__filter-btn">Changan
+                            CS75</button>
+                    </div>
+                    <div
+                        class="catalog__filter-group catalog__filter-group--secondary"
+                        id="material-filter">
+                        <button class="catalog__filter-btn active">НЕРЖАВЕЮЩАЯ
+                            СТАЛЬ AISI 304</button>
+                        <button class="catalog__filter-btn">ЧЕРНОЕ ПОРОШКОВОЕ
+                            ПОКРЫТИЕ</button>
+                    </div>
+                </div>
+
+                <div class="catalog__grid">
+                    <div class="product-card">
+                        <div class="product-card__img-wrapper">
+                            <img src="images/pruduct-front.png"
+                                alt="Защита переднего бампера">
+                        </div>
+                        <h3 class="product-card__title">ЗАЩИТА ПЕРЕДНЕГО
+                            БАМПЕРА</h3>
+                        <div class="product-card__specs">
+                            <p><span class="spec-label">СОВМЕСТИМОСТЬ:</span>
+                                JAC T9</p>
+                            <p><span class="spec-label">МАТЕРИАЛ:</span>
+                                НЕРЖАВЕЮЩАЯ СТАЛЬ AISI 304</p>
+                        </div>
+                        <p class="product-card__desc">Усиленная защита решетки
+                            радиатора и бампера. Сохраняет заводской угол выезда
+                            для off-road условий.</p>
+                        <div class="product-card__bottom">
+                            <span class="product-card__status">В НАЛИЧИИ</span>
+                            <button
+                                class="btn btn--outline btn--small">ПОДРОБНЕЕ</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-card__img-wrapper">
+                            <img src="images/product-rear.png"
+                                alt="Защита заднего бампера">
+                        </div>
+                        <h3 class="product-card__title">ЗАЩИТА ЗАДНЕГО
+                            БАМПЕРА</h3>
+                        <div class="product-card__specs">
+                            <p><span class="spec-label">СОВМЕСТИМОСТЬ:</span>
+                                JAC T9</p>
+                            <p><span class="spec-label">МАТЕРИАЛ:</span>
+                                НЕРЖАВЕЮЩАЯ СТАЛЬ AISI 304</p>
+                        </div>
+                        <p class="product-card__desc">Надежный барьер от задних
+                            столкновений с интегрированной подножкой и полной
+                            поддержкой фаркопа.</p>
+                        <div class="product-card__bottom">
+                            <span class="product-card__status">В НАЛИЧИИ</span>
+                            <button
+                                class="btn btn--outline btn--small">ПОДРОБНЕЕ</button>
+                        </div>
+                    </div>
+
+                    <div class="product-card">
+                        <div class="product-card__img-wrapper">
+                            <img src="images/product-full.png"
+                                alt="Полный комплект защиты">
+                        </div>
+                        <h3 class="product-card__title">ПОЛНЫЙ КОМПЛЕКТ
+                            ЗАЩИТЫ</h3>
+                        <div class="product-card__specs">
+                            <p><span class="spec-label">СОВМЕСТИМОСТЬ:</span>
+                                JAC T9</p>
+                            <p><span class="spec-label">МАТЕРИАЛ:</span>
+                                НЕРЖАВЕЮЩАЯ СТАЛЬ AISI 304</p>
+                        </div>
+                        <p class="product-card__desc">Комплексный обвес 360°,
+                            включающий переднюю и заднюю защиту, а также боковые
+                            пороги.</p>
+                        <div class="product-card__bottom">
+                            <span class="product-card__status">В НАЛИЧИИ</span>
+                            <button
+                                class="btn btn--outline btn--small">ПОДРОБНЕЕ</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="advantages" id="advantages">
+            <div class="container">
+                <h2 class="section-title">ПРЕИМУЩЕСТВА ГРАНФОРТА</h2>
+                <p class="section-subtitle">Инженерное совершенство в каждой
+                    детали обвеса.</p>
+
+                <div class="advantages__grid">
+                    <div class="adv-card">
+                        <h3 class="adv-card__title">УСТАНОВКА БЕЗ СВЕРЛЕНИЯ</h3>
+                        <p class="adv-card__text">Используем штатные
+                            технологические отверстия завода.</p>
+                    </div>
+                    <div class="adv-card">
+                        <h3 class="adv-card__title">ТОЧНОЕ ПРОЕКТИРОВАНИЕ</h3>
+                        <p class="adv-card__text">3D-сканирование кузова
+                            гарантирует зазоры по заводским стандартам.</p>
+                    </div>
+                    <div class="adv-card">
+                        <h3 class="adv-card__title">ВСЕПОГОДНАЯ ЗАЩИТА</h3>
+                        <p class="adv-card__text">Устойчивость к резким
+                            перепадам температур, морозам и дорожным
+                            химикатам.</p>
+                    </div>
+                    <div class="adv-card">
+                        <h3 class="adv-card__title">МОДУЛЬНАЯ КОНСТРУКЦИЯ</h3>
+                        <p class="adv-card__text">Возможность легкой замены
+                            элементов и установки дополнительного света.</p>
+                    </div>
+                    <div class="adv-card">
+                        <h3 class="adv-card__title">АНТИКОРРОЗИЙНЫЙ ЩИТ</h3>
+                        <p class="adv-card__text">Многослойная обработка
+                            исключает появление ржавчины на весь срок
+                            службы.</p>
+                    </div>
+                    <div class="adv-card">
+                        <h3 class="adv-card__title">ФАКТУРНЫЙ ДИЗАЙН</h3>
+                        <p class="adv-card__text">Особое микротекстурное
+                            покрытие против сколов и мелких царапин.</p>
+                    </div>
+                    <div class="adv-card">
+                        <h3 class="adv-card__title">ГАРАНТИЯ ПРОИЗВОДИТЕЛЯ</h3>
+                        <p class="adv-card__text">Официальная 5-летняя гарантия
+                            на сварные швы и конструкцию.</p>
+                    </div>
+                    <div class="adv-card">
+                        <h3 class="adv-card__title">КАСТОМИЗАЦИЯ</h3>
+                        <p class="adv-card__text">Изготовление под заказ по
+                            индивидуальным размерам и чертежам.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="custom-order" id="order">
+            <div class="container">
+                <h2 class="section-title">ИНДИВИДУАЛЬНЫЙ <span
+                        class="text-accent">ЗАКАЗ</span></h2>
+                <p class="section-subtitle">Не нашли нужную модель в каталоге?
+                    Оставьте заявку на персональное проектирование.</p>
+
+                <div class="custom-order__wrapper">
+                    <form class="custom-order__form" id="order-form">
+                        <div class="custom-order__grid">
+                            <div class="form-group">
+                                <label for="name">ФИО *</label>
+                                <input type="text" id="name"
+                                    placeholder="Иван Иванов" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Телефон *</label>
+                                <input type="tel" id="phone"
+                                    placeholder="+7 (999) 000-00-00" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="model">Модель автомобиля *</label>
+                                <input type="text" id="model"
+                                    placeholder="Например: Tank 500, Jetour T2"
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <label for="year">Год выпуска *</label>
+                                <input type="text" id="year" placeholder="2024"
+                                    required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Прикрепить фото автомобиля *</label>
+                            <div class="file-upload">
+                                <input type="file" id="file-upload"
+                                    accept="image/png, image/jpeg" required>
+                                <span class="file-upload__text">Перетащите фото
+                                    сюда или нажмите для выбора<br><small>PNG,
+                                        JPG ДО 10 МБ</small></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="wishes">Пожелания заказчику *</label>
+                            <textarea id="wishes"
+                                placeholder="Укажите особые пожелания по толщине металла, цвету покрытия или креплению..."
+                                required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn--submit">Отправить
+                            заявку</button>
+                    </form>
+
+                    <div class="custom-order__info">
+                        <span class="custom-order__badge">ИНДИВИДУАЛЬНОЕ
+                            ПРОИЗВОДСТВО</span>
+                        <h3 class="custom-order__info-title">РЕАЛИЗУЕМ
+                            ЛЮБЫЕ<br>ВАШИ<br>ПОЖЕЛАНИЯ.</h3>
+                        <p class="custom-order__info-text">Наши инженеры
+                            изготовят комплект силового обвеса по
+                            индивидуальному проекту с учетом специфики вашего
+                            автомобиля и условий эксплуатации.</p>
+                        <ul class="custom-order__list">
+                            <li>3D-моделирование перед запуском в
+                                производство</li>
+                            <li>Подбор индивидуального цвета и структуры
+                                порошка</li>
+                            <li>Персональный менеджер на всех этапах</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer" id="contacts">
+            <div class="container">
+                <div class="footer__top">
+                    <div class="footer__col">
+                        <h3 class="footer__title">КОНТАКТЫ</h3>
+                        <ul class="footer__list">
+                            <li>
+                                <img src="icons/location.svg" alt="Адрес">
+                                <span>место положение</span>
+                            </li>
+                            <li>
+                                <img src="icons/phone.svg" alt="Телефон">
+                                <span>8 900 ХХХ ХХ ХХ</span>
+                            </li>
+                            <li>
+                                <img src="icons/mail.svg" alt="Почта">
+                                <span>почта</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer__col">
+                        <h3 class="footer__title">КАРТА САЙТА</h3>
+                        <ul class="footer__list footer__list--links">
+                            <li><a href="#">Главная</a></li>
+                            <li><a href="#about">О нас</a></li>
+                            <li><a href="#catalog">Каталог</a></li>
+                            <li><a href="#order">Заказ</a></li>
+                            <li><a href="#advantages">Преимущества</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__col footer__col--info">
+                        <div class="footer__logo">
+                            <img src="icons/logo.png" alt="Гранфорт">
+                            <span>Гранфорт</span>
+                        </div>
+                        <p class="footer__desc">Разработка и производство
+                            силовых защитных систем для внедорожников и
+                            пикапов.</p>
+                        <div class="footer__socials">
+                            <p>Мы в соцсетях</p>
+                            <div class="footer__social-links">
+                                <a href="#"><img src="icons/telegram.svg"
+                                        alt="Telegram"></a>
+                                <a href="#"><img src="icons/vk.svg"
+                                        alt="VK"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__bottom">
+                    <p>© 2026</p>
+                </div>
+            </div>
+        </footer>
+
+        <script src="js/script.js"></script>
+    </body>
+</html>
