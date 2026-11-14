@@ -38,27 +38,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    const orderForm = document.getElementById('order-form');
-    if (orderForm) {
-        orderForm.addEventListener('submit', function (e) {
-            e.preventDefault();
-            const btn = this.querySelector('.btn--submit');
-            const originalText = btn.textContent;
-
-            btn.textContent = 'Отправка...';
-            btn.style.opacity = '0.7';
-            btn.disabled = true;
-
-            setTimeout(() => {
-                alert('Ваша заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.');
-                this.reset();
-                btn.textContent = originalText;
-                btn.style.opacity = '1';
-                btn.disabled = false;
-            }, 1000);
-        });
-    }
-
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const targetId = this.getAttribute('href');
