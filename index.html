@@ -13,6 +13,7 @@
                 <a href="#" class="header__logo">
                     <img src="icons/logo.png" alt="Гранфорт">
                 </a>
+                <span class="header__name">Гранфорт</span>
                 <nav class="header__nav">
                     <ul class="header__list">
                         <li><a href="#" class="header__link">Главная</a></li>
@@ -27,7 +28,8 @@
                     </ul>
                 </nav>
                 <a href="#contacts" class="header__btn">Контакты</a>
-                <button class="header__burger" id="burger-btn">
+                <button class="header__burger" id="burger-btn"
+                    aria-label="Открыть меню" aria-expanded="false">
                     <span></span>
                     <span></span>
                     <span></span>
@@ -36,6 +38,8 @@
         </header>
 
         <div class="mobile-menu" id="mobile-menu">
+            <button class="mobile-menu__close" id="menu-close"
+                aria-label="Закрыть меню">&times;</button>
             <nav class="mobile-menu__nav">
                 <ul class="mobile-menu__list">
                     <li><a href="#" class="mobile-menu__link">Главная</a></li>
@@ -60,10 +64,11 @@
                         ПРЕМИАЛЬНАЯ<br>
                         ЗАЩИТА БАМПЕРОВ<br>
                         <span class="hero__title-accent">ДЛЯ
-                            КИТАЙСКИХ<br>ВНЕДОРОЖНИКОВ И<br>ПИКАПОВ.</span>
+                            КИТАЙСКИХ <br>ВНЕДОРОЖНИКОВ И <br>ПИКАПОВ.</span>
                     </h1>
                     <p class="hero__text">
-                        НЕПРЕВЗОЙДЕННОЕ КАЧЕСТВО И ТОЧНОСТЬ ПОСАДКИ.<br>
+                        <span class="hero__text-lead">НЕПРЕВЗОЙДЕННОЕ КАЧЕСТВО И
+                            ТОЧНОСТЬ ПОСАДКИ.</span><br>
                         Разработано из высокопрочной нержавеющей стали и
                         прочного<br>
                         порошкового покрытия для максимальной защиты в городе и
@@ -329,7 +334,7 @@
                         <span class="custom-order__badge">ИНДИВИДУАЛЬНОЕ
                             ПРОИЗВОДСТВО</span>
                         <h3 class="custom-order__info-title">РЕАЛИЗУЕМ
-                            ЛЮБЫЕ<br>ВАШИ<br>ПОЖЕЛАНИЯ.</h3>
+                            ЛЮБЫЕ <br>ВАШИ <br>ПОЖЕЛАНИЯ.</h3>
                         <p class="custom-order__info-text">Наши инженеры
                             изготовят комплект силового обвеса по
                             индивидуальному проекту с учетом специфики вашего

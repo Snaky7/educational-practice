@@ -2,16 +2,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const burgerBtn = document.getElementById('burger-btn');
     const mobileMenu = document.getElementById('mobile-menu');
+    const menuClose = document.getElementById('menu-close');
 
     if (burgerBtn && mobileMenu) {
+        const setMenu = (open) => {
+            mobileMenu.classList.toggle('active', open);
+            burgerBtn.setAttribute('aria-expanded', open);
+        };
+
         burgerBtn.addEventListener('click', () => {
-            mobileMenu.classList.toggle('active');
+            setMenu(!mobileMenu.classList.contains('active'));
         });
+
+        if (menuClose) {
+            menuClose.addEventListener('click', () => setMenu(false));
+        }
 
         mobileMenu.addEventListener('click', (e) => {
             if (e.target.tagName === 'A') {
-                mobileMenu.classList.remove('active');
+                setMenu(false);
             }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') setMenu(false);
         });
     }
 

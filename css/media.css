@@ -1,71 +1,367 @@
+/* Название компании в шапке: только на мобильных */
+.header__name {
+    display: none;
+}
+
 @media (max-width: 1024px) {
     .hero__container {
         flex-direction: column;
         text-align: center;
     }
+
     .hero__content {
         max-width: 100%;
         margin-bottom: 40px;
     }
+
     .hero__buttons {
         justify-content: center;
     }
+
     .hero__image {
         width: 80%;
     }
+
     .catalog__grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .advantages__grid {
         grid-template-columns: repeat(2, 1fr);
     }
+
     .custom-order__wrapper {
         grid-template-columns: 1fr;
     }
 }
 
 @media (max-width: 768px) {
-    .header__nav, .header__btn {
+
+    /* Шапка: логотип, название по центру, бургер */
+    .header {
+        padding: 14px 0;
+    }
+
+    .header__nav,
+    .header__btn {
         display: none;
     }
+
+    .header__name {
+        display: block;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        white-space: nowrap;
+    }
+
     .header__burger {
         display: flex;
+        padding: 10px 8px;
+        margin-right: -8px;
     }
+
+    .header__burger span {
+        width: 26px;
+        height: 3px;
+        border-radius: 2px;
+        background-color: #1BCA93;
+    }
+
+    /* Мобильное меню */
+    .mobile-menu__close {
+        position: absolute;
+        top: 14px;
+        right: 20px;
+        width: 44px;
+        height: 44px;
+        font-size: 34px;
+        line-height: 1;
+        color: #FFFFFF;
+    }
+
+    .mobile-menu__link {
+        display: inline-block;
+        padding: 6px 0;
+    }
+
+    /* Общие стили секций */
+    .section-title {
+        font-size: 20px;
+    }
+
+    .section-subtitle {
+        font-size: 12px;
+        margin-bottom: 30px;
+    }
+
+    .about,
+    .catalog,
+    .advantages,
+    .custom-order {
+        padding: 50px 0;
+    }
+
+    /* Главный экран: заголовок слева, машина справа, ниже текст и кнопки */
+    .hero {
+        padding: 40px 0 50px;
+    }
+
+    .hero__container {
+        display: grid;
+        grid-template-columns: 1.1fr 1fr;
+        grid-template-areas:
+            "title image"
+            "text text"
+            "buttons buttons";
+        align-items: center;
+        column-gap: 12px;
+        text-align: left;
+    }
+
+    .hero__content {
+        display: contents;
+    }
+
     .hero__title {
-        font-size: 28px;
+        grid-area: title;
+        font-size: clamp(13px, 3.9vw, 18px);
+        margin-bottom: 0;
     }
+
+    .hero__image {
+        grid-area: image;
+        width: 100%;
+    }
+
+    .hero__text {
+        grid-area: text;
+        font-size: 11px;
+        line-height: 1.9;
+        margin: 25px 0;
+    }
+
+    .hero__text br {
+        display: none;
+    }
+
+    .hero__text-lead {
+        display: block;
+        font-size: 14px;
+        line-height: 1.5;
+        color: #D7D1D1;
+        margin-bottom: 10px;
+    }
+
+    .hero__buttons {
+        grid-area: buttons;
+        flex-direction: row;
+        justify-content: flex-start;
+        gap: 12px;
+    }
+
+    .hero__buttons .btn {
+        padding: 12px 22px;
+    }
+
+    /* О нас: две карточки в ряд */
     .about__grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
     }
+
+    .about__card {
+        padding: 14px;
+        border-radius: 10px;
+    }
+
+    .about__img-wrapper {
+        height: 100px;
+        padding: 10px;
+        margin-bottom: 12px;
+    }
+
+    .about__card-title {
+        font-size: 10px;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .about__card-text {
+        font-size: 10px;
+    }
+
+    /* Каталог: фильтры моделей в одну прокручиваемую строку, материалы в два столбца */
+    .catalog__filters {
+        gap: 12px;
+        margin-bottom: 30px;
+    }
+
+    .catalog__filter-group {
+        width: 100%;
+        gap: 8px;
+    }
+
+    .catalog__filter-group:not(.catalog__filter-group--secondary) {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        overflow-x: auto;
+        scrollbar-width: none;
+        padding: 8px 4px;
+        margin: -8px 0;
+    }
+
+    .catalog__filter-group:not(.catalog__filter-group--secondary)::-webkit-scrollbar {
+        display: none;
+    }
+
+    .catalog__filter-group:not(.catalog__filter-group--secondary) .catalog__filter-btn {
+        flex: 0 0 auto;
+        white-space: nowrap;
+        padding: 8px 12px;
+        font-size: 11px;
+    }
+
+    .catalog__filter-group:not(.catalog__filter-group--secondary) .catalog__filter-btn:first-child {
+        margin-left: auto;
+    }
+
+    .catalog__filter-group:not(.catalog__filter-group--secondary) .catalog__filter-btn:last-child {
+        margin-right: auto;
+    }
+
+    .catalog__filter-group--secondary {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .catalog__filter-group--secondary .catalog__filter-btn {
+        padding: 10px 12px;
+        font-size: 12px;
+        text-align: left;
+    }
+
     .catalog__grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+        width: 90%;
+        margin: 0 auto;
     }
+
+    .product-card {
+        padding: 20px;
+    }
+
+    .product-card__specs p,
+    .product-card__status {
+        font-size: 11px;
+    }
+
+    .product-card__desc {
+        font-size: 12px;
+    }
+
+    /* Преимущества: два столбца, узкие карточки по центру */
     .advantages__grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+        justify-items: center;
+        align-items: center;
     }
-    .footer__top {
-        grid-template-columns: 1fr;
-    }
-    .footer__list--links {
-        grid-template-columns: 1fr;
-    }
-    .catalog__filter-group {
-        flex-direction: column;
+
+    .adv-card {
         width: 100%;
+        max-width: 38vw;
+        padding: 16px 12px;
+        text-align: center;
     }
-    .catalog__filter-btn {
-        width: 100%;
+
+    /* Индивидуальный заказ: без рамок-карточек, поля в два столбца */
+    .custom-order__form,
+    .custom-order__info {
+        background: none;
+        border: none;
+        box-shadow: none;
+        padding: 0;
     }
-    .hero__buttons {
-        flex-direction: column;
-    }
-    .hero__buttons .btn {
-        width: 100%;
-    }
+
     .custom-order__grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(2, auto);
+        grid-auto-flow: column;
+        gap: 0 16px;
+        margin-bottom: 0;
     }
+
+    .form-group label {
+        font-size: 10px;
+    }
+
+    /* 16px, чтобы iPhone не приближал страницу при вводе */
+    .form-group input[type="text"],
+    .form-group input[type="tel"],
+    .form-group textarea {
+        font-size: 16px;
+        padding: 12px;
+    }
+
+    .form-group textarea {
+        min-height: 90px;
+    }
+
+    .file-upload {
+        padding: 24px 16px;
+    }
+
+    .custom-order__info {
+        align-self: auto;
+    }
+
     .custom-order__info-title {
-        font-size: 24px;
+        font-size: 18px;
+    }
+
+    .custom-order__info-title br {
+        display: none;
+    }
+
+    .custom-order__info-text,
+    .custom-order__list li {
+        font-size: 12px;
+    }
+
+    /* Подвал: контакты и карта сайта в два столбца, ниже описание */
+    .footer {
+        padding: 40px 0 20px;
+    }
+
+    .footer__top {
+        grid-template-columns: 1fr 1fr;
+        gap: 28px 16px;
+    }
+
+    .footer__col--info {
+        grid-column: 1 / -1;
+    }
+
+    .footer__list--links {
+        grid-template-columns: 1fr 1fr;
+        gap: 8px 12px;
+    }
+
+    .footer__list--links li {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 16px;
     }
 }
